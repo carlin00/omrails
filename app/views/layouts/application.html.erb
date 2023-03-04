@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Omrails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+<title>Alex lærer Ruby</title>
+<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'%>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", about_path %>
-    <%= link_to "Faq", faq_path%>
-    <%= yield %>
-  </body>
-</html>
+<body>
+
+<!—— Navigation dar --->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <%= link_to "JANSENS VERDEN", root_path, class:"navbar-brand" %>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
+</ul>
+</div>
+</nav>
+
+<%= yield =%>
+<!-- Footer -->
+<footer class="small text-muted">
+<div class="container">
+<hr>
+<center>
+<p> ONE MONTH BRO</p>
+</center>
+</div>
+</footer>
+</body>
+</html> 
